@@ -1,0 +1,18 @@
+<div data-ng-controller="cardsController">			
+	<div class="page-header well"><h1>There are {{cardPairs.length}} cardPairs</h1></div>
+	<table class="table table-hover table-striped well">
+		<thead>
+		    <tr>
+		      	<th>Source ID</th>
+		        <th>Duplicated ID</th>
+		        <th>Action</th>
+		      </tr>
+	    </thead>
+	    <tbody>   		
+			<tr data-ng-repeat="card in cardPairs">			
+				<td>{{card.srcID}}</td><td>{{card.dupID}}</td><td><button type="button" class="btn btn-primary btn-sm">modify</button></td>
+			</tr>	
+		</tbody>								
+	</table>
+</div>
+

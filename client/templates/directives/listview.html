@@ -1,0 +1,21 @@
+	<table class="table table-hover table-striped well">
+		<thead>
+		    <tr>
+		    	<th>Date</th>
+		      	<th>Requester</th>
+		        <th>Type</th>
+		        <th>Status</th>
+		        <th>More</th>
+		      </tr>
+	    </thead>
+	    <tbody>   		
+			<tr data-ng-repeat="leave in leaves">			
+				<td><b ng-bind="leave.submit_time | date:'dd/MM/yyyy'"></b></td><td>{{leave.requestor}}</td><td>{{leave.leave_type}}</td><td>{{leave.status}}</td>
+				<td><button type="button" class="btn btn-info btn-sm" ng-click="showLeave(leave)">Detail</button>
+					<!-- <button type="button" class="btn btn-info btn-sm" ng-click="showLeave(leave)">Modify</button> -->
+				</td>
+				<!-- The actual modal template, just a bit o bootstrap -->
+
+			</tr>	
+		</tbody>								
+	</table>
